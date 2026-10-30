@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+/* Design tokens from Paper. See DESIGN.md. */
+@theme {
+  --color-ink: #141413;
+  --color-stone: #6b6a65;
+  --color-hairline: #e3e2dd;
+  --color-canvas: #edece8;
+  --color-paper: #fafaf8;
+  --color-asphalt: #1d1e1a;
+  --color-olive-grey: #3a3c34;
+  --color-orange: #f7941d;
+  --color-burnt-orange: #a8550a;
+  --color-cone-tint: #fdebd6;
+
+  --animate-hero-image: hero-image 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-hero-rise: hero-rise 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes hero-image {
+    from {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Homepage sections on appear. Only the content moves, so section backgrounds stay put.
+   The logo row has no box of its own on wide screens, so its logos are targeted directly. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal > section > *,
+  .reveal > section > .xl\:contents > * {
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal > section > :not([data-shown]) {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .reveal > section > :nth-child(2) {
+    transition-delay: 100ms;
+  }
+
+  .reveal > section > :nth-child(3) {
+    transition-delay: 200ms;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (min-width: 80rem) {
+  .reveal > section > .xl\:contents > :not([data-shown]) {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .reveal > section > .xl\:contents > * {
+    transition-delay: 100ms;
+  }
+}
+
+/* SVG interface animations in "How it looks working with us". Each element's
+   normal style is its finished look, so reduced motion shows the end state. */
+.fx-rise {
+  animation: fx-rise 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fx-fade {
+  animation: fx-fade 500ms ease-out both;
+}
+
+.fx-pop {
+  animation: fx-pop 2200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  border-radius: 4px;
+}
+
+.fx-slide {
+  animation: fx-slide 2200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fx-typing {
+  animation: fx-typing 1500ms ease-out both;
+  opacity: 0;
+}
+
+.fx-dot {
+  animation: fx-dot 900ms ease-in-out infinite;
+}
+
+.fx-pulse {
+  animation: fx-pulse 2400ms ease-out infinite;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.fx-travel {
+  animation: fx-travel 2600ms cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  opacity: 0;
+}
+
+/* Moves the feature list on to the next item when it finishes. */
+.fx-timer {
+  animation: fx-timer 5000ms linear both;
+  transform-origin: left;
+}
+
+/* The feature list's pause button also stops the interface animations. */
+.fx-paused,
+.fx-paused * {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-scene,
+  .fx-scene * {
+    animation: none !important;
+  }
+
+  .fx-timer {
+    display: none;
+  }
+}
+
+@keyframes fx-timer {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes fx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fx-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fx-pop {
+  0% {
+    opacity: 0;
+    clip-path: inset(6.5% var(--fx-pill-x) 67.6% var(--fx-pill-x) round 28px);
+    transform: translateY(14px) scale(0.92);
+  }
+  18% {
+    opacity: 1;
+    clip-path: inset(6.5% var(--fx-pill-x) 67.6% var(--fx-pill-x) round 28px);
+    transform: none;
+  }
+  50% {
+    clip-path: inset(6.5% var(--fx-pill-x) 67.6% var(--fx-pill-x) round 28px);
+  }
+  100% {
+    clip-path: inset(0 0 0 0 round 4px);
+  }
+}
+
+@keyframes fx-slide {
+  0%,
+  50% {
+    transform: translate(var(--fx-dx, 0), var(--fx-dy, 0));
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes fx-typing {
+  0% {
+    opacity: 0;
+  }
+  12%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fx-dot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes fx-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes fx-travel {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(var(--fx-travel));
+  }
+}
