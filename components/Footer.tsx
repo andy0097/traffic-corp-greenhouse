@@ -29,7 +29,7 @@ const headingStyle = "text-[13px] leading-4 text-stone";
 
 export function Footer() {
   return (
-    <footer className="flex flex-col gap-16 bg-paper px-5 pt-[72px] pb-10 min-[1100px]:px-16">
+    <footer className="flex flex-col gap-16 bg-paper px-page pt-[72px] pb-10">
       <div className="flex flex-col gap-12 min-[1100px]:flex-row min-[1100px]:justify-between min-[1100px]:gap-8">
         <div className="flex max-w-[360px] flex-col gap-5">
           <Link href="/" className="flex w-fit items-center gap-2.5">

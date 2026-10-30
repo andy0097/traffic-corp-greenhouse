@@ -40,6 +40,8 @@ The full visual rules are in `DESIGN.md`. The exact spelling of the company name
 
 ## Recent Changes
 
+- 2026-10-30: Page content now stops at 1440px wide on large screens, while backgrounds and photos still run edge to edge. The hero and logo bar together fill the first screen
+- 2026-10-30: Removed the Pause/Play button from "How it looks working with us"
 - 2026-10-30: Accessibility and speed pass: added a "Skip to content" link, a Pause button on the feature list, readable inactive features, larger menu arrows, clearer required fields in the estimate form, smaller images, and a proper page title and description
 - 2026-10-30: The stripes between steps in the estimate page are now the paper color instead of dark green-grey
 - 2026-10-30: Homepage sections below the hero now gently fade and rise into place the first time they scroll into view

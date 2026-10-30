@@ -56,7 +56,7 @@ export function CustomerStories() {
   const [hasSwitched, setHasSwitched] = useState(false);
 
   return (
-    <section className="flex flex-col items-center gap-12 border-t border-hairline px-5 py-24 min-[768px]:py-32 min-[1100px]:px-16 min-[1100px]:pt-[140px] min-[1100px]:pb-[241px]">
+    <section className="flex flex-col items-center gap-12 border-t border-hairline px-page py-24 min-[768px]:py-32 min-[1100px]:pt-[140px] min-[1100px]:pb-[241px]">
       <div className="flex flex-col items-center gap-5 text-center">
         <p className="font-mono text-sm leading-[18px] text-burnt-orange uppercase">
           Customer stories

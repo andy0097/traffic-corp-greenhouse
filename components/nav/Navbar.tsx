@@ -178,7 +178,7 @@ export function Navbar() {
       >
         {/* Phone and email */}
         <div
-          className={`flex h-[29px] items-center justify-end gap-6 border-b px-5 text-[13px] leading-4 transition-colors duration-200 min-[1100px]:px-16 ${
+          className={`flex h-[29px] items-center justify-end gap-6 border-b px-page text-[13px] leading-4 transition-colors duration-200 ${
             onDark
               ? "border-paper/40 text-paper/70"
               : "border-stone/60 text-stone"
@@ -197,7 +197,7 @@ export function Navbar() {
 
         {/* Logo, links and action */}
         <div
-          className={`flex h-[61px] items-center justify-between border-b px-5 transition-colors duration-200 min-[1100px]:px-16 ${
+          className={`flex h-[61px] items-center justify-between border-b px-page transition-colors duration-200 ${
             panelOpen
               ? "border-transparent"
               : onDark

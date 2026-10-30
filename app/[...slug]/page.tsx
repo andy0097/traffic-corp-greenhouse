@@ -14,7 +14,7 @@ export default async function PlaceholderPage({
   if (!allNavHrefs.includes(href)) notFound();
 
   return (
-    <main id="main" tabIndex={-1} className="min-h-[150vh] px-5 py-28 outline-none min-[1100px]:px-16">
+    <main id="main" tabIndex={-1} className="min-h-[150vh] px-page py-28 outline-none">
       <p className="font-mono text-sm leading-[18px] text-burnt-orange uppercase">
         Page coming soon
       </p>

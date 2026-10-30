@@ -333,7 +333,7 @@ export function EstimateConfigurator() {
 
   return (
     <main id="main" tabIndex={-1} className="outline-none">
-      <div className="px-5 pt-10 min-[1100px]:px-16 min-[1100px]:pt-[72px]">
+      <div className="px-page pt-10 min-[1100px]:pt-[72px]">
         <nav aria-label="Estimate steps">
           <Stepper step={step} onSelect={goTo} />
         </nav>
@@ -344,7 +344,7 @@ export function EstimateConfigurator() {
 
         <div
           inert={phase === "covering"}
-          className="px-5 pt-8 pb-24 min-[1100px]:px-16 min-[1100px]:pb-[120px]"
+          className="px-page pt-8 pb-24 min-[1100px]:pb-[120px]"
         >
           <div className="flex flex-col gap-3.5 pb-10">
             <h1

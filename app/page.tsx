@@ -11,10 +11,13 @@ import { WorkingWithUs } from "@/components/WorkingWithUs";
 export default function Home() {
   return (
     <main id="main" tabIndex={-1} className="outline-none">
-      <Hero />
-      <Reveal>
-        <TrustedBy />
-      </Reveal>
+      {/* Together the hero and the logo bar fill the first screen. */}
+      <div className="flex min-h-svh flex-col">
+        <Hero />
+        <Reveal>
+          <TrustedBy />
+        </Reveal>
+      </div>
       <Reveal>
         <Services />
       </Reveal>

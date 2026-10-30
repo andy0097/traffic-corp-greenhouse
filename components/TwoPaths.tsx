@@ -28,7 +28,7 @@ function PathText({
 
 export function TwoPaths() {
   return (
-    <section className="flex justify-center bg-canvas px-5 py-24 min-[768px]:py-32 min-[1100px]:px-16 min-[1100px]:py-[241px]">
+    <section className="flex justify-center bg-canvas px-page py-24 min-[768px]:py-32 min-[1100px]:py-[241px]">
       <div className="flex w-full flex-col gap-16 min-[1100px]:w-auto min-[1100px]:flex-row min-[1100px]:gap-0">
         <div className="flex flex-col items-start gap-[50px] min-[1100px]:w-[481px] min-[1100px]:border-r min-[1100px]:border-hairline min-[1100px]:pr-16">
           <PathText

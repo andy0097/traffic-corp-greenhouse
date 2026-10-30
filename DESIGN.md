@@ -98,7 +98,7 @@ Always uppercase, except the logo.
 
 ## Spacing and layout
 
-- **Page width:** 1440px design, with **64px** side margins and a 1312px content area.
+- **Page width:** 1440px design, with **64px** side margins and a 1312px content area. On wider screens content stays within 1440px and backgrounds run edge to edge; use the `px-page` style for side margins.
 - **Section padding (top and bottom):** 241px for major light sections, 120px for dark sections, 112px for the Locations section. Sections with a hairline on top use 140px at the top and 241px at the bottom.
 - **Spacing steps in use:** 2, 4, 6, 8, 10, 12, 16, 20, 24, 28, 32, 40, 48, 64, 80.
 - **Common gaps:**
@@ -144,7 +144,7 @@ A canvas-colored track with a 4px gap. The active tab is solid ink with paper te
 
 ### Numbered feature list
 
-A 32px column for the number, a 24px gap, then title and description. Rows are divided by 1px lines with 24px padding. Inactive rows have a stone title instead of ink, so the list reads as an interactive selector. The frame fades them to 30% opacity, but that text is too faint to read (1.5:1). A small "Pause" text button sits under the list because it moves on by itself.
+A 32px column for the number, a 24px gap, then title and description. Rows are divided by 1px lines with 24px padding. Inactive rows have a stone title instead of ink, so the list reads as an interactive selector. The frame fades them to 30% opacity, but that text is too faint to read (1.5:1). The list moves on by itself and waits while someone hovers over it or tabs through it. It has no pause button, by request.
 
 ### Status card and pills
 

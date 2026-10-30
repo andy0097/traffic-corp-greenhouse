@@ -47,7 +47,6 @@ export function WorkingWithUs() {
   const [selected, setSelected] = useState(0);
   const [inView, setInView] = useState(false);
   const [onScreen, setOnScreen] = useState(false);
-  const [paused, setPaused] = useState(false);
   // The list also waits while someone is reading it with a mouse or keyboard.
   const [holding, setHolding] = useState(false);
   const panel = useRef<HTMLDivElement>(null);
@@ -69,7 +68,7 @@ export function WorkingWithUs() {
   }, []);
 
   return (
-    <section className="grid gap-y-12 border-t border-hairline px-5 py-24 min-[768px]:py-32 min-[1100px]:grid-cols-2 min-[1100px]:grid-rows-[auto_1fr] min-[1100px]:gap-x-16 min-[1100px]:px-16 min-[1100px]:pt-[140px] min-[1100px]:pb-[241px] min-[1280px]:grid-cols-[560px_1fr]">
+    <section className="grid gap-y-12 border-t border-hairline px-page py-24 min-[768px]:py-32 min-[1100px]:grid-cols-2 min-[1100px]:grid-rows-[auto_1fr] min-[1100px]:gap-x-16 min-[1100px]:pt-[140px] min-[1100px]:pb-[241px] min-[1280px]:grid-cols-[560px_1fr]">
       <div className="flex flex-col gap-5">
         <p className="font-mono text-sm leading-[18px] text-burnt-orange uppercase">
           How it looks working with us
@@ -98,9 +97,7 @@ export function WorkingWithUs() {
         {inView && (
           <div
             key={selected}
-            className={`fx-scene absolute inset-0 flex items-center justify-center p-3 min-[480px]:p-10 ${
-              paused ? "fx-paused" : ""
-            }`}
+            className="fx-scene absolute inset-0 flex items-center justify-center p-3 min-[480px]:p-10"
           >
             <div className="hidden w-full max-w-[420px] min-[480px]:block">
               <Scene width={WIDE} />
@@ -141,7 +138,7 @@ export function WorkingWithUs() {
                   className="fx-timer absolute inset-x-0 -top-px h-0.5 bg-orange"
                   style={{
                     animationPlayState:
-                      onScreen && !paused && !holding ? "running" : "paused",
+                      onScreen && !holding ? "running" : "paused",
                   }}
                   onAnimationEnd={() =>
                     setSelected((index + 1) % features.length)
@@ -166,14 +163,6 @@ export function WorkingWithUs() {
             </button>
           );
         })}
-        <button
-          type="button"
-          aria-pressed={paused}
-          onClick={() => setPaused(!paused)}
-          className="cursor-pointer self-start border-t border-transparent py-3 font-mono text-sm leading-[18px] text-ink uppercase underline decoration-1 [text-underline-position:from-font] motion-reduce:hidden"
-        >
-          {paused ? "Play" : "Pause"}
-        </button>
       </div>
     </section>
   );

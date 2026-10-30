@@ -14,7 +14,7 @@ const jobs = [
 
 export function JoinOurTeam() {
   return (
-    <section className="flex flex-col gap-16 bg-asphalt px-5 py-24 min-[1100px]:flex-row min-[1100px]:items-center min-[1100px]:px-16 min-[1100px]:py-[120px]">
+    <section className="flex flex-col gap-16 bg-asphalt px-page py-24 min-[1100px]:flex-row min-[1100px]:items-center min-[1100px]:py-[120px]">
       <div className="flex flex-col gap-10 min-[1100px]:min-h-[520px] min-[1100px]:w-[520px] min-[1100px]:shrink-0 min-[1100px]:justify-between">
         <div className="flex flex-col gap-5">
           <p className="font-mono text-sm leading-[18px] text-orange uppercase">

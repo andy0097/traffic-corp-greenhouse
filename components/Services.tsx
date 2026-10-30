@@ -223,7 +223,7 @@ export function Services() {
   };
 
   return (
-    <section className="flex flex-col gap-12 px-5 py-24 min-[768px]:py-32 min-[1100px]:px-16 min-[1100px]:py-[241px]">
+    <section className="flex flex-col gap-12 px-page py-24 min-[768px]:py-32 min-[1100px]:py-[241px]">
       <h2 className="max-w-[600px] text-[36px] leading-[44px] font-medium tracking-[-0.04em] text-ink min-[1100px]:text-5xl min-[1100px]:leading-[58px]">
         Full-service traffic solutions for contractors, utility companies and
         state

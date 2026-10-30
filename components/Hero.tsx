@@ -49,7 +49,7 @@ export function Hero() {
   const rise = "animate-hero-rise motion-reduce:animate-none";
 
   return (
-    <section className="relative flex min-h-svh overflow-hidden bg-ink px-5 pt-[150px] pb-10 min-[1100px]:h-[895px] min-[1100px]:min-h-0 min-[1100px]:px-16 min-[1100px]:pt-[244px] min-[1100px]:pb-14">
+    <section className="relative flex flex-1 overflow-hidden bg-ink px-page pt-[150px] pb-10 min-[1100px]:pt-[clamp(130px,calc(100svh-656px),244px)] min-[1100px]:pb-14">
       <Image
         src="/images/hero.jpg"
         alt="Traffic control flagger on site beside a road work zone"

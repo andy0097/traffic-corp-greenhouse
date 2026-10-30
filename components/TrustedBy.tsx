@@ -12,7 +12,7 @@ const logos = [
 
 export function TrustedBy() {
   return (
-    <section className="flex flex-col gap-6 border-y border-hairline px-5 py-8 min-[1100px]:px-16 xl:h-[114px] xl:flex-row xl:items-center xl:justify-between">
+    <section className="flex flex-col gap-6 border-y border-hairline px-page py-8 xl:h-[114px] xl:flex-row xl:items-center xl:justify-between">
       <p className="w-[180px] shrink-0 text-[13px] leading-4 text-stone">
         Trusted by utilities, prime contractors and public agencies
       </p>

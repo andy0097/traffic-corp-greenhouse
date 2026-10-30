@@ -35,7 +35,7 @@ const locations = [
 
 export function Locations() {
   return (
-    <section className="flex flex-col gap-12 px-5 py-24 min-[768px]:py-28 min-[1100px]:px-16">
+    <section className="flex flex-col gap-12 px-page py-24 min-[768px]:py-28">
       <div className="flex flex-col gap-5">
         <p className="font-mono text-sm leading-[18px] text-burnt-orange uppercase">
           Locations

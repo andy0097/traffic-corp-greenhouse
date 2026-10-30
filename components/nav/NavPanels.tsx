@@ -20,7 +20,7 @@ const eyebrow =
 function ServicesPanel({ onNavigate }: { onNavigate: () => void }) {
   return (
     <>
-      <div className="flex px-16 pt-10">
+      <div className="flex px-page pt-10">
         {serviceColumns.map((column) => (
           <div
             key={column.title}
@@ -48,7 +48,7 @@ function ServicesPanel({ onNavigate }: { onNavigate: () => void }) {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-between border-t border-hairline bg-canvas px-16 py-[18px]">
+      <div className="flex items-center justify-between border-t border-hairline bg-canvas px-page py-[18px]">
         <p className="text-[15px] leading-[18px] text-stone">
           Not sure what you need? Tell us about the job and we&apos;ll put it
           together.
@@ -133,7 +133,7 @@ function SolutionsPanel({ onNavigate }: { onNavigate: () => void }) {
   const solution = solutions[selected];
 
   return (
-    <div className="flex gap-12 px-16 pt-10 pb-12">
+    <div className="flex gap-12 px-page pt-10 pb-12">
       <SelectList
         title="Who we work with"
         rows={solutions}
@@ -175,7 +175,7 @@ function LocationsPanel({ onNavigate }: { onNavigate: () => void }) {
   const location = locations[selected];
 
   return (
-    <div className="flex gap-12 px-16 pt-10 pb-12">
+    <div className="flex gap-12 px-page pt-10 pb-12">
       <SelectList
         title="Where we work"
         rows={locations}
